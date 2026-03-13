@@ -1,0 +1,1540 @@
+{
+  "info": {
+    "_postman_id": "f43ce57e-a78c-42ae-be87-96dfbc30c75a",
+    "name": "clinicaOdontologica",
+    "description": "Endpoints de la clinica odontologica creada con SpringBoot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47511891",
+    "_collection_link": "https://go.postman.co/collection/47511891-f43ce57e-a78c-42ae-be87-96dfbc30c75a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "localhost:8080/api/auth/login",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTE2NzE2LCJleHAiOjE3NzE1MjAzMTZ9.jHsXJkCMY4EONzRyO9UfGC1ej2W-YnApZc_aodsFzLM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"usuario\": \"martina\",\r\n    \"contrasenia\":  \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/auth/login",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "description": "Iniciar sesion con usuario y contraseña"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/usuarios",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTUwNTY2LCJleHAiOjE3NzAxNTQxNjZ9.uV1ZTvwXDv0dcFy_t41GGQpmCQ-L3RklkHSdjOfzErY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"usuario\": \"Angela\",\r\n    \"contrasenia\": \"123\",\r\n    \"rol\": \"ODONTOLOGO\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/usuarios",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios"
+          ]
+        },
+        "description": "Metodo Post de usuarios para crear un nuevo usuario"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/usuarios",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzY5ODAzMDAxLCJleHAiOjE3Njk4MDY2MDF9.EOLohXx5LGUcu5qfSXV4LM6S3y2Kixi5YSlFE_Cj0L0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"usuario\": \"batata\",\r\n    \"contrasenia\": \"1234\",\r\n    \"rol\" : \"ADMIN\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/usuarios",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios"
+          ]
+        },
+        "description": "Metodo GET para listar a todos los usuarios disponibles, esten activos o inactivos."
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/usuarios/1",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzY4ODU3NzY3LCJleHAiOjE3Njg4NjEzNjd9.0sGEOlBHDYVlk_epOgE7QDQnfeq_XIA-jEUJh7uABvQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"usuario\": \"batata\",\r\n    \"contrasenia\": \"1234\",\r\n    \"rol\" : \"ADMIN\"\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/api/usuarios/4",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios",
+            "4"
+          ]
+        },
+        "description": "localhost:8080/api/usuarios/id_usuario, busca a un usuario por su id"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/usuarios/1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzY5ODAzMDAxLCJleHAiOjE3Njk4MDY2MDF9.EOLohXx5LGUcu5qfSXV4LM6S3y2Kixi5YSlFE_Cj0L0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"usuario\": \"Batata\",\r\n    \"contrasenia\": \"12345\",\r\n    \"rol\": \"ADMIN\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/usuarios/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios",
+            "3"
+          ]
+        },
+        "description": "Metodo PUT para editar un usuario mediante su id_usuario"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/usuarios/baja/3",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzY5ODAzMDAxLCJleHAiOjE3Njk4MDY2MDF9.EOLohXx5LGUcu5qfSXV4LM6S3y2Kixi5YSlFE_Cj0L0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/usuarios/baja/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "usuarios",
+            "baja",
+            "3"
+          ]
+        },
+        "description": "Baja logica de un Usuario mediante el metodo PUT"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/secretarios",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTUwNTY2LCJleHAiOjE3NzAxNTQxNjZ9.uV1ZTvwXDv0dcFy_t41GGQpmCQ-L3RklkHSdjOfzErY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"dni\":\"36.214.967\",\r\n     \"nombre\": \"Monica\",\r\n     \"apellido\": \"Ledesma\",\r\n     \"telefono\":\"1188973219\",\r\n     \"direccion\":\"Lanus\",\r\n     \"fecha_nac\":\"1993-03-21\",\r\n     \"sector\":\"Ortodoncia\",\r\n     \"id_usuario\":\"5\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/secretarios",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "secretarios"
+          ]
+        },
+        "description": "Metodo POST para crear Secretarios"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/secretarios/listar",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTUwNTY2LCJleHAiOjE3NzAxNTQxNjZ9.uV1ZTvwXDv0dcFy_t41GGQpmCQ-L3RklkHSdjOfzErY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/secretarios/listar",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "secretarios",
+            "listar"
+          ]
+        },
+        "description": "Esta solicitud solo pertenece a usuario Administrador para mostrar a todos los secretarios mediante el metodo GET"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/secretarios/editar/5",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTU2NDQwLCJleHAiOjE3NzAxNjAwNDB9.SWPDAhD2ph59hk0J-8gUSldZMWdrEOfpA_ajLMMNn08",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"dni\":\"36.214.966\",\r\n     \"nombre\": \"Monica\",\r\n     \"apellido\": \"Playadito\",\r\n     \"telefono\":\"1188973219\",\r\n     \"direccion\":\"Lanus\",\r\n     \"fecha_nac\":\"1994-03-19\",\r\n     \"sector\":\"Ortodoncia\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/secretarios/editar/4",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "secretarios",
+            "editar",
+            "4"
+          ]
+        },
+        "description": "Metodo PUT para editar a los secretarios por medio de su ID "
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/secretarios/baja/4",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMjQxMjcwLCJleHAiOjE3NzAyNDQ4NzB9.cwTRRukZ3sGIHZg_Dg9SsWleCGwhpaebatg9qBi07fk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"dni\":\"36.214.966\",\r\n     \"nombre\": \"Monica\",\r\n     \"apellido\": \"Playadito\",\r\n     \"telefono\":\"1188973219\",\r\n     \"direccion\":\"Lanus\",\r\n     \"fecha_nac\":\"1994-03-19\",\r\n     \"sector\":\"Ortodoncia\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/secretarios/baja/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "secretarios",
+            "baja",
+            "3"
+          ]
+        },
+        "description": "Baja Logica de un secretario por medio de su ID con metodo PUT"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/secretarios/reactivar/4",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTU2NDQwLCJleHAiOjE3NzAxNjAwNDB9.SWPDAhD2ph59hk0J-8gUSldZMWdrEOfpA_ajLMMNn08",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/secretarios/reactivar/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "secretarios",
+            "reactivar",
+            "3"
+          ]
+        },
+        "description": "Reactivacion logica de un secretario por el metodo PUT"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/odontologos",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTYxNTk0LCJleHAiOjE3NzAxNjUxOTR9.VmOnt9HYLw3qzE-F2RglfOtfEVTmm7XPz7_fJdTJWi0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.731.908\",\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\":\"Paez\",\r\n    \"telefono\": \"1145668235\",\r\n    \"direccion\": \"Lanus\",\r\n    \"fecha_nac\": \"1993-04-28\",\r\n    \"especialidad\": \"Ortodoncia\",    \r\n    \"id_usuario\": \"4\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/odontologos",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "odontologos"
+          ]
+        },
+        "description": "Metodo POST para dar de alta a nuevos Odontologos"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/odontologos/listar",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMjQxMjcwLCJleHAiOjE3NzAyNDQ4NzB9.cwTRRukZ3sGIHZg_Dg9SsWleCGwhpaebatg9qBi07fk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.731.908\",\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\":\"Paez\",\r\n    \"telefono\": \"1145668235\",\r\n    \"direccion\": \"Lanus\",\r\n    \"fecha_nac\": \"1993-04-28\",\r\n    \"especialidad\": \"Ortodoncia\",    \r\n    \"id_usuario\": \"4\"\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/api/odontologos/listar",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "odontologos",
+            "listar"
+          ]
+        },
+        "description": "Metodo GET para listar a todos los odontologos que esten activos"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/odontologos/2",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTYxNTk0LCJleHAiOjE3NzAxNjUxOTR9.VmOnt9HYLw3qzE-F2RglfOtfEVTmm7XPz7_fJdTJWi0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.731.908\",\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\":\"Paez\",\r\n    \"telefono\": \"1145668235\",\r\n    \"direccion\": \"Lanus\",\r\n    \"fecha_nac\": \"1993-04-28\",\r\n    \"especialidad\": \"Ortodoncia\",    \r\n    \"id_usuario\": \"4\"\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/api/odontologos/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "odontologos",
+            "1"
+          ]
+        },
+        "description": "Metodo GET que busca a un Odontologo por ID "
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/odontologos/editar",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTYxNTk0LCJleHAiOjE3NzAxNjUxOTR9.VmOnt9HYLw3qzE-F2RglfOtfEVTmm7XPz7_fJdTJWi0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.731.988\",\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\":\"Paz\",\r\n    \"telefono\": \"1143668235\",\r\n    \"direccion\": \"Lanus\",\r\n    \"fecha_nac\": \"1993-06-28\",\r\n    \"especialidad\": \"Ortodoncia\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/odontologos/editar/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "odontologos",
+            "editar",
+            "2"
+          ]
+        },
+        "description": "Metodo PUT para editar un usuario Odontologo "
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/odontologos/baja/2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMTYxNTk0LCJleHAiOjE3NzAxNjUxOTR9.VmOnt9HYLw3qzE-F2RglfOtfEVTmm7XPz7_fJdTJWi0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.731.988\",\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\":\"Paz\",\r\n    \"telefono\": \"1143668235\",\r\n    \"direccion\": \"Lanus\",\r\n    \"fecha_nac\": \"1993-06-28\",\r\n    \"especialidad\": \"Ortodoncia\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/odontologos/baja/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "odontologos",
+            "baja",
+            "2"
+          ]
+        },
+        "description": "Baja logica de un Odontologo mediante el metodo PUT "
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/odontologos/reactivar/2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMjQxMjcwLCJleHAiOjE3NzAyNDQ4NzB9.cwTRRukZ3sGIHZg_Dg9SsWleCGwhpaebatg9qBi07fk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.731.988\",\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\":\"Paz\",\r\n    \"telefono\": \"1143668235\",\r\n    \"direccion\": \"Lanus\",\r\n    \"fecha_nac\": \"1993-06-28\",\r\n    \"especialidad\": \"Ortodoncia\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/odontologos/reactivar/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "odontologos",
+            "reactivar",
+            "2"
+          ]
+        },
+        "description": "Metodo PUT para reactivar a un odontologo mediante su ID"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/pacientes",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTM4NjMyLCJleHAiOjE3NzE1NDIyMzJ9.y4SnMyw0oXlA9bnabm1wkPzFkEXvDOJfx_Ct7qFmaEs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"dni\":\"53.982.357\",\r\n     \"nombre\": \"Maria\",\r\n     \"apellido\": \"Selva\",\r\n     \"telefono\":\"1135212082\",\r\n     \"direccion\":\"Gerli\",\r\n     \"fecha_nac\":\"2010-03-20\",\r\n     \"tieneOS\":\"false\",\r\n     \"tipo_tratamiento\": \"Odontopediatria\",\r\n     \"id_responsable\":\"3\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/pacientes",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pacientes"
+          ]
+        },
+        "description": "Metodo POST para crear un nuevo paciente"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/pacientes/listar",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMjQ1MDYwLCJleHAiOjE3NzAyNDg2NjB9.rH6EvbnaQ-gRhyyMdZg9fJRoiIDPHnwa1Xpt9KiXZ3A",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/pacientes/listar",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pacientes",
+            "listar"
+          ]
+        },
+        "description": "Metodo GET para traer a todos los pacientes activos de la base de datos"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/pacientes/editar/2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTM4NjMyLCJleHAiOjE3NzE1NDIyMzJ9.y4SnMyw0oXlA9bnabm1wkPzFkEXvDOJfx_Ct7qFmaEs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id_responsable\":\"1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/pacientes/editar/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pacientes",
+            "editar",
+            "2"
+          ]
+        },
+        "description": "Metodo PUT para editar pacientes mediante su ID"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/pacientes/baja/1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMzM0MTQ0LCJleHAiOjE3NzAzMzc3NDR9.u6UCWqaiddWTPofI-rQCdGGi0tkNNPUwgpdVfCAsHRE",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\":\"41.932.228\",\r\n    \"nombre\":\"Sofia\",\r\n    \"apellido\":\"Salvatierra\",\r\n    \"telefono\":\"1128289334\",\r\n    \"direccion\":\"Gerli\",\r\n    \"fecha_nac\":\"1999-08-01\",\r\n    \"tiene_OS\":\"true\",\r\n    \"tipo_tratamiento\":\"Ortodoncia\",\r\n    \"id_responsable\":\"\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/pacientes/baja/5",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pacientes",
+            "baja",
+            "5"
+          ]
+        },
+        "description": "Metodo PUT para dar de baja de forma logica"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/pacientes/reactivar/5",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMzM0MTQ0LCJleHAiOjE3NzAzMzc3NDR9.u6UCWqaiddWTPofI-rQCdGGi0tkNNPUwgpdVfCAsHRE",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\":\"41.932.228\",\r\n    \"nombre\":\"Sofia\",\r\n    \"apellido\":\"Salvatierra\",\r\n    \"telefono\":\"1128289334\",\r\n    \"direccion\":\"Gerli\",\r\n    \"fecha_nac\":\"1999-08-01\",\r\n    \"tiene_OS\":\"true\",\r\n    \"tipo_tratamiento\":\"Ortodoncia\",\r\n    \"id_responsable\":\"\"\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/api/pacientes/reactivar/5",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pacientes",
+            "reactivar",
+            "5"
+          ]
+        },
+        "description": "Metodo PUT para dar de alta a un paciente de forma logica"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/pacientes/3",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMzM0MTQ0LCJleHAiOjE3NzAzMzc3NDR9.u6UCWqaiddWTPofI-rQCdGGi0tkNNPUwgpdVfCAsHRE",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\":\"41.932.228\",\r\n    \"nombre\":\"Sofia\",\r\n    \"apellido\":\"Salvatierra\",\r\n    \"telefono\":\"1128289334\",\r\n    \"direccion\":\"Gerli\",\r\n    \"fecha_nac\":\"1999-08-01\",\r\n    \"tiene_OS\":\"true\",\r\n    \"tipo_tratamiento\":\"Ortodoncia\",\r\n    \"id_responsable\":\"\"\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/api/pacientes/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pacientes",
+            "3"
+          ]
+        },
+        "description": "Metodo DELETE para eliminar a un paciente"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/pacientes/admin/listar",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcwMzM0MTQ0LCJleHAiOjE3NzAzMzc3NDR9.u6UCWqaiddWTPofI-rQCdGGi0tkNNPUwgpdVfCAsHRE",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\":\"41.932.228\",\r\n    \"nombre\":\"Sofia\",\r\n    \"apellido\":\"Salvatierra\",\r\n    \"telefono\":\"1128289334\",\r\n    \"direccion\":\"Gerli\",\r\n    \"fecha_nac\":\"1999-08-01\",\r\n    \"tiene_OS\":\"true\",\r\n    \"tipo_tratamiento\":\"Ortodoncia\",\r\n    \"id_responsable\":\"\"\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/api/pacientes/admin/listar",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pacientes",
+            "admin",
+            "listar"
+          ]
+        },
+        "description": "Metodo para administrador que trae a todos los pacientes ACTIVOS o INACTIVOS"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/responsable",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTE2NzE2LCJleHAiOjE3NzE1MjAzMTZ9.jHsXJkCMY4EONzRyO9UfGC1ej2W-YnApZc_aodsFzLM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n    \"dni\": \"42.972.138\",\r\n    \"nombre\": \"Paula\",\r\n    \"apellido\":\"Molina\",\r\n    \"telefono\":\"1123458271\",\r\n    \"direccion\":\"Lanus\",\r\n    \"fecha_nac\": \"1999-03-23\",\r\n    \"tipo_relacion\": \"Madre\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/responsable",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "responsable"
+          ]
+        },
+        "description": "Metodo POST para crear a un nuevo responsable para un paciente en caso de que sea menor de edad."
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/responsable",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTM4NjMyLCJleHAiOjE3NzE1NDIyMzJ9.y4SnMyw0oXlA9bnabm1wkPzFkEXvDOJfx_Ct7qFmaEs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/responsable",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "responsable"
+          ]
+        },
+        "description": "Metodo GET para traer a todos los responsables que tengan como estado ACTIVO"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/responsable/1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTE2NzE2LCJleHAiOjE3NzE1MjAzMTZ9.jHsXJkCMY4EONzRyO9UfGC1ej2W-YnApZc_aodsFzLM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.481.285\",\r\n    \"nombre\": \"Mariano\",\r\n    \"apellido\": \"Pintos\",\r\n    \"telefono\":\"1121356728\",\r\n    \"direccion\":\"Gerli\",\r\n    \"fecha_nac\": \"1991-10-08\",\r\n    \"tipo_relacion\": \"Padre\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/responsable/1",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "responsable",
+            "1"
+          ]
+        },
+        "description": "Metodo PUT para editar los datos de un Responsable por medio de su ID"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/responsable/baja/2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTM4NjMyLCJleHAiOjE3NzE1NDIyMzJ9.y4SnMyw0oXlA9bnabm1wkPzFkEXvDOJfx_Ct7qFmaEs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.481.285\",\r\n    \"nombre\": \"Mariano\",\r\n    \"apellido\": \"Pintos\",\r\n    \"telefono\":\"1121356728\",\r\n    \"direccion\":\"Gerli\",\r\n    \"fecha_nac\": \"1991-10-08\",\r\n    \"tipo_relacion\": \"Padre\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/responsable/baja/5",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "responsable",
+            "baja",
+            "5"
+          ]
+        },
+        "description": "Metodo PUT para dar de baja Logica a un responsable por medio de su ID"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/responsable/reactivar/2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTE2NzE2LCJleHAiOjE3NzE1MjAzMTZ9.jHsXJkCMY4EONzRyO9UfGC1ej2W-YnApZc_aodsFzLM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.481.285\",\r\n    \"nombre\": \"Mariano\",\r\n    \"apellido\": \"Pintos\",\r\n    \"telefono\":\"1121356728\",\r\n    \"direccion\":\"Gerli\",\r\n    \"fecha_nac\": \"1991-10-08\",\r\n    \"tipo_relacion\": \"Padre\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/responsable/reactivar/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "responsable",
+            "reactivar",
+            "2"
+          ]
+        },
+        "description": "Metodo PUT para reactivar un responsable de forma logica por medio de su ID"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/responsable/eliminar/4",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTM4NjMyLCJleHAiOjE3NzE1NDIyMzJ9.y4SnMyw0oXlA9bnabm1wkPzFkEXvDOJfx_Ct7qFmaEs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"dni\": \"36.481.285\",\r\n    \"nombre\": \"Mariano\",\r\n    \"apellido\": \"Pintos\",\r\n    \"telefono\":\"1121356728\",\r\n    \"direccion\":\"Gerli\",\r\n    \"fecha_nac\": \"1991-10-08\",\r\n    \"tipo_relacion\": \"Padre\"\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/api/responsable/eliminar/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "responsable",
+            "eliminar",
+            "3"
+          ]
+        },
+        "description": "Metodo DELETE para eliminar un responsable definitivamente"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/responsable/admin",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZWRyb3gxMCIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzcxNTM4NjMyLCJleHAiOjE3NzE1NDIyMzJ9.y4SnMyw0oXlA9bnabm1wkPzFkEXvDOJfx_Ct7qFmaEs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/responsable/admin",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "responsable",
+            "admin"
+          ]
+        },
+        "description": "Metodo GET solo para administradores que trae a todos los responsables tanto activos como inactivos"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/turnos/nuevoTurno/1/6",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MTg4NzkyMSwiZXhwIjoxNzcxODkxNTIxfQ.Oh_zcwig4Z_mx7Q0Pmxa8sAkSGPMWcWPNfAZjJPaBTQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"fechaTurno\": \"2026-02-27\",\r\n    \"horaTurno\": \"16:30\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/turnos/nuevoTurno/2/4",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "turnos",
+            "nuevoTurno",
+            "2",
+            "4"
+          ]
+        },
+        "description": "Metodo POST para crear un nuevo turno por medio de los IDs de un Odontologo y un Paciente"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/turnos/reservados",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MTg4NzkyMSwiZXhwIjoxNzcxODkxNTIxfQ.Oh_zcwig4Z_mx7Q0Pmxa8sAkSGPMWcWPNfAZjJPaBTQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/turnos/reservados",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "turnos",
+            "reservados"
+          ]
+        },
+        "description": "Metodo GET para traer todos los turnos reservados"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/turnos/cancelar/3",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MTg4NzkyMSwiZXhwIjoxNzcxODkxNTIxfQ.Oh_zcwig4Z_mx7Q0Pmxa8sAkSGPMWcWPNfAZjJPaBTQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"motivoCancelacion\": \"Aviso de cancelacion\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/turnos/cancelar/4",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "turnos",
+            "cancelar",
+            "4"
+          ]
+        },
+        "description": "Metodo PUT para cancelar un turno mediante su ID. "
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/turnos/turnosOdontologo/1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MTg4NzkyMSwiZXhwIjoxNzcxODkxNTIxfQ.Oh_zcwig4Z_mx7Q0Pmxa8sAkSGPMWcWPNfAZjJPaBTQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/turnos/turnosOdontologo/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "turnos",
+            "turnosOdontologo",
+            "2"
+          ]
+        },
+        "description": "Metodo GET para traer los turnos del odontologo mediante su ID"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/turnos/turnosFuturos/2",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MTg4NzkyMSwiZXhwIjoxNzcxODkxNTIxfQ.Oh_zcwig4Z_mx7Q0Pmxa8sAkSGPMWcWPNfAZjJPaBTQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/turnos/turnosFuturos/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "turnos",
+            "turnosFuturos",
+            "2"
+          ]
+        },
+        "description": "Metodo GET para traer todos los turnos de un odontologo por su ID"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/turnos/turnoPorDia/",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MTg4NzkyMSwiZXhwIjoxNzcxODkxNTIxfQ.Oh_zcwig4Z_mx7Q0Pmxa8sAkSGPMWcWPNfAZjJPaBTQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/turnos/turnoPorDia/2?fecha=2026-02-12",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "turnos",
+            "turnoPorDia",
+            "2"
+          ],
+          "query": [
+            {
+              "key": "fecha",
+              "value": "2026-02-12"
+            }
+          ]
+        },
+        "description": "Metodo GET para traer turnos para una feche concreta"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/turnos/observacion/1",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MTg5MTY0OCwiZXhwIjoxNzcxODk1MjQ4fQ.VyOyeDhTu2yiG5rRzB8GBACdObfbw0EYB_i66pjWqZk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"observacion\":\"Se le realizo un tratamiento y debe volver para control\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/turnos/observacion/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "turnos",
+            "observacion",
+            "2"
+          ]
+        },
+        "description": "Metodo PUT para registrar una Observacion por parte de un Odontologo a un paciente"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/turnos/pacientesPorDia",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MTg5MTY0OCwiZXhwIjoxNzcxODk1MjQ4fQ.VyOyeDhTu2yiG5rRzB8GBACdObfbw0EYB_i66pjWqZk",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/turnos/pacientesPorDia?fecha=2026-02-12",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "turnos",
+            "pacientesPorDia"
+          ],
+          "query": [
+            {
+              "key": "fecha",
+              "value": "2026-02-12"
+            }
+          ]
+        },
+        "description": "Metodo GET para traer la cantidad de turnos atendidos de una fecha determinada"
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:8080/api/pacientes/EstadisticaObraSocial",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJ0aW5hIiwicm9sZXMiOlsiUk9MRV9TRUNSRVRBUklPIl0sImlhdCI6MTc3MjE0MTYwNCwiZXhwIjoxNzcyMTQ1MjA0fQ.boNZlsRS40lg6-HAaHb7AJsO5N7Bf1yH_YgRoOdAeE4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/api/pacientes/EstadisticaObraSocial",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pacientes",
+            "EstadisticaObraSocial"
+          ]
+        },
+        "description": "Metodo GET para traer la cantidad de pacientes que tengan Obra Social y sin"
+      },
+      "response": []
+    }
+  ]
+}
